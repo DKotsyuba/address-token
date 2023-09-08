@@ -60,8 +60,7 @@ describe('AddressToken', async function () {
                     name: 'Deploy to 0x89E802345bfB6CaD865fb5935fb6749D65D25764',
                     description: 'Enables holder to deploy arbitrary smart contract to 0x89E802345bfB6CaD865fb5935fb6749D65D25764',
                     external_url: 'https://etherscan.io/address/0x89E802345bfB6CaD865fb5935fb6749D65D25764',
-                    image: 'ipfs://QmZW3TTdtK87ktxmh6PG5UumbtoWXU8rVBApo65oknekmc',
-                    animation_url: 'ipfs://QmZKp3K7oyDFPkVUXUgDKqZ6RcLZY7QW267JvXRTLW1qaG',
+                    image: 'https://scarlet-fellow-llama-839.mypinata.cloud/ipfs/QmdHkbGhYkJr9TSwJGEg74xLEr2pLLBJ4dwKg1VqoZkvYJ/1.png',
                     attributes: [
                         { trait_type: 'Zero bytes', value: 0 },
                         { trait_type: 'Symbol 0', value: 1 },
