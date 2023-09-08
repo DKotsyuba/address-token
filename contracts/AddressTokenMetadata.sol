@@ -19,6 +19,9 @@ contract AddressTokenMetadata is IAddressTokenMetadata {
             _detectAlphabets(accountHex)
         );
 
+        uint256 imageIndex = tokenId % 5;
+        bytes memory imageIndexHex = bytes(Strings.toString(imageIndex));
+
         // Cut out last ',\n':
         // attributes.length -= 2;
         assembly ("memory-safe") {  // solhint-disable-line no-inline-assembly
@@ -31,8 +34,7 @@ contract AddressTokenMetadata is IAddressTokenMetadata {
             '\t"name": "Deploy to ', accountHex, '",\n',
             '\t"description": "Enables holder to deploy arbitrary smart contract to ', accountHex, '",\n',
             '\t"external_url": "https://etherscan.io/address/', accountHex, '",\n',
-            '\t"image": "ipfs://QmZW3TTdtK87ktxmh6PG5UumbtoWXU8rVBApo65oknekmc",\n',
-            '\t"animation_url": "ipfs://QmZKp3K7oyDFPkVUXUgDKqZ6RcLZY7QW267JvXRTLW1qaG",\n',
+            '\t"image": "https://scarlet-fellow-llama-839.mypinata.cloud/ipfs/QmdHkbGhYkJr9TSwJGEg74xLEr2pLLBJ4dwKg1VqoZkvYJ/', imageIndexHex ,'.png",\n',
             '\t"attributes": [\n',
                 attributes, bytes(attributes.length > 0 ? '\n' : ''),
             '\t]\n',
